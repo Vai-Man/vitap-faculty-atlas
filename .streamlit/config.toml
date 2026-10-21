@@ -6,7 +6,7 @@ secondaryBackgroundColor = "#f4f6f9"
 textColor = "#0b0b0b"
 
 [client]
-toolbarMode = "auto"
+toolbarMode = "minimal"
 
 [browser]
 gatherUsageStats = false
