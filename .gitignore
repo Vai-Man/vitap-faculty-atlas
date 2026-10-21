@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+logs/
+
+# Raw/sensitive data
+data/photos/
+data/raw/vitap_faculty_raw.previous.json
+
+# Generated outputs (charts, screenshots, analysis JSON)
+outputs/
+
+# Submission-specific artifacts
+SUBMISSION_CHECKLIST.md
+presentation/
+report/final_report.pdf
+report/final_report.tex
+report/prepare_code.py
+report/code/
+
+# LaTeX build artifacts
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.lof
+report/*.lot
+
+# OS
+.DS_Store
+Thumbs.db

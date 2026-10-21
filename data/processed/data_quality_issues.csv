@@ -1,0 +1,97 @@
+﻿faculty_id,name,issue,profile_url
+VITAP-70087,Dr. Sudhakar Ilango,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/sudhakar.ilango
+VITAP-70087,Dr. Sudhakar Ilango,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/sudhakar.ilango
+VITAP-70169,Dr. Benarji Chakka,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Law%20(VSL)/faculty/benarji.chakka
+VITAP-70169,Dr. Benarji Chakka,scopus_unparsed,https://vitap.ac.in/School%20of%20Law%20(VSL)/faculty/benarji.chakka
+VITAP-70014,Dr. Jagadish Chandra Mudiganti,missing_specialisation,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/mudiganti.jc
+VITAP-70806,Dr. P Arulmozhivarman,rank_not_stated,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/vc
+VITAP-70806,Dr. P Arulmozhivarman,missing_specialisation,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/vc
+VITAP-70541,Dr. Ananthu S Hari,scopus_unparsed,https://vitap.ac.in/School%20of%20Law%20(VSL)/faculty/ananthu.s.hari
+VITAP-70098,Dr. Vemula Ramakrishna Reddy,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/ramakrishna.reddy
+VITAP-70359,Dr. Nagarjuna Neella,scopus_unparsed,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/nagarjuna.neela
+VITAP-70048,Dr. V R K Murty,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/vrkm
+VITAP-70456,Dr. Mary Chandini Stephens,non_institutional_email,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/marychandini.y
+VITAP-70106,Dr. Paramasivam R,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/paramasivam.r
+VITAP-70493,Dr. Hemant Kumar Reddy,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/hemanth.reddy
+VITAP-70012,Dr. Khadheer Pasha Sk,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/khadheerpasha.sk
+VITAP-70032,Dr. Hussain Syed,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/hussain.syed
+VITAP-70878,Dr. Mithilesh Kumar Dubey,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/mithileshkumar.dubey
+VITAP-70951,Dr. Marriboyina Sreedevi,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/sreedevi.marriboyina
+VITAP-70105,Dr. Samineni Peddakrishna,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/samineni.peddakrishna
+VITAP-70498,Dr. K N V P S Rajesh,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/rajesh.k
+VITAP-70869,Dr. Pulluri Harish,scopus_unparsed,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/harish.pulluri
+VITAP-70015,Dr. Sudhakar M,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/sudhakar.matle
+VITAP-70041,Dr. Venkatrajam Marka,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/v.marka
+VITAP-70197,Dr. Prashanth Maroju,scopus_unparsed,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/prashanth.m
+VITAP-70362,Dr. .Prabhakaran Thandapani,scopus_unparsed,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/prabhakaran.thandapani
+VITAP-70635,Dr. G. Soma Sekhar,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Business%20(VSB)/faculty/somasekhar.g
+VITAP-70066,Dr. Ravi Sankar Barpanda,orcid_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/ravi.barpanda
+VITAP-70192,Dr. Yada Nandukumar,scopus_unparsed,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/nandukumar.y
+VITAP-70396,Dr. Chandan Nayak,scopus_unparsed,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/chandan.nayak
+VITAP-70521,Dr. Rafael Gonzalez Macho,missing_specialisation,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/rafael.gonzalez
+VITAP-70562,Dr. Mohit Kumar,scopus_unparsed,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/mohitkumar
+VITAP-70735,Dr. Shaik Subhani,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/subhani.shaik
+VITAP-70805,Dr. Inampudi Govardhana Rao,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/govardhanarao.i
+VITAP-70934,Dr. K Sree Divya,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/sreedivya.k
+VITAP-70971,Dr. Tangala Venkateswarlu,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Business%20(VSB)/faculty/venkateswarlu.tangala
+VITAP-70372,Dr. Ritambhara Sharma,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/ritambhara.sharma
+VITAP-70390,Dr. Beebi Naseeba,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/beebi.naseeba
+VITAP-70439,Dr. Karunakar Perumandla,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/karunakar.perumandla
+VITAP-70460,Dr. Faizan Danish,orcid_unparsed,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/faizan.danish
+VITAP-70509,Dr. Sandhya Sadanandan,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/sandhya.sadanandan
+VITAP-70522,Dr. Tauseef Khan,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/tauseef.khan
+VITAP-70591,Dr. Chintakindi Balaram Murthy,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/balaram.ch
+VITAP-70640,Dr. Pokuri Srinivasa Rao,orcid_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/pokuri.srinivasarao
+VITAP-70646,Dr. Sunkara Kalyani,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/kalyani.s
+VITAP-70877,Dr. Pallepogu Prasanna Kumar,scopus_unparsed,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/prasannakumar.pallepogu
+VITAP-70882,Dr. Kadiyam Rajshekar,scopus_unparsed,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/kadiyam.rajshekar
+VITAP-70910,Dr. Pranjal Kumar,scholar_not_profile_link,https://vitap.ac.in/SBST/faculty/pranjal.k
+VITAP-70430,Dr. Anupama A. P.,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/anupama.ap
+VITAP-70430,Dr. Anupama A. P.,orcid_unparsed,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/anupama.ap
+VITAP-70491,Dr. Amar Ramesh Wayal,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/amar.w
+VITAP-70512,Dr. Ramesh A,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/ramesh.a
+VITAP-70530,Dr. Pranav Anand Ojha,missing_specialisation,https://vitap.ac.in/School%20of%20Law%20(VSL)/faculty/pranavanand.o
+VITAP-70614,Dr. Kottu Durga Prasad,scopus_unparsed,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/durgaorasad.k
+VITAP-70680,Dr. T Rama Thulasi,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/ramathulasi.t
+VITAP-70686,Dr. Sanal Kumar T S,missing_email,
+VITAP-70686,Dr. Sanal Kumar T S,no_profile_url,
+VITAP-70706,Dr. K Aravind,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/aravind.k
+VITAP-70719,Dr. Ankur Pandey,scopus_unparsed,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/ankur.p
+VITAP-70793,Dr. Chattu Kannaiah,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/kannaiah.ch
+VITAP-70824,Dr. Lanka Divya,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/divya.lanka
+VITAP-70828,Dr. N Md Jubair Basha,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/jubairbasha.md
+VITAP-70830,Dr. Kranthi Kumar Reddy Missal,missing_specialisation,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/kranthi.m
+VITAP-70856,Dr. Balaraju Ramesh,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/balaraju.ramesh
+VITAP-70856,Dr. Balaraju Ramesh,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/balaraju.ramesh
+VITAP-70872,Dr. Mullapudi Siva,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/siva.mullapudi
+VITAP-70873,Dr. Sonia Das,missing_specialisation,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/sonia.das
+VITAP-70885,Dr. Mahendra Sahare,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/mahendra.sahare
+VITAP-70898,Dr. Shaik Wasim Akram,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/wasim.shaik
+VITAP-70905,Dr. Patan Mushiya Katoon,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/mushiyakatoon.patan
+VITAP-70905,Dr. Patan Mushiya Katoon,scopus_unparsed,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/mushiyakatoon.patan
+VITAP-70933,Dr. Mamilla Sreenivasulu,missing_specialisation,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/sreenivasulu.mamilla
+VITAP-70946,Dr. Charulata Palai,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/charulata.palai
+VITAP-70950,Dr. Karumanchi Beulah Sujan,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/beulahsujan.karumanchi
+VITAP-70950,Dr. Karumanchi Beulah Sujan,scopus_unparsed,https://vitap.ac.in/School%20of%20Electronics%20Engineering%20(SENSE)/faculty/beulahsujan.karumanchi
+VITAP-70965,Dr. Bhavna Thawani,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Business%20(VSB)/faculty/bhavana.thawani
+VITAP-70569,Dr. Vanacharla Pujitha,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/pujitha.v
+VITAP-70594,Dr. Ashraf Pulikkamath,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/ashraf.p
+VITAP-70606,Dr. Anshul Gopal,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/anshul.gopal
+VITAP-70612,Dr. Rajashree Naik,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/rajashree.naik
+VITAP-70636,Dr. Umer Mushtaq Lone,scopus_unparsed,https://vitap.ac.in/School%20of%20Business%20(VSB)/faculty/umermushtaq.lone
+VITAP-70773,Dr. Srabani Chakraborty,scopus_unparsed,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/srabani.chakraborty
+VITAP-70902,Dr. Rohit Verma,scopus_unparsed,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/rohit.verma
+VITAP-70682,Dr. Anindita Roy,missing_specialisation,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/anindita.roy
+VITAP-70780,Dr. Keerthi Jain Kushal Jain,missing_specialisation,https://vitap.ac.in/School%20of%20Business%20(VSB)/faculty/keerthijain.Kj
+VITAP-70901,Dr. Moumita Ghosh,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/moumita.ghosh
+VITAP-70909,Dr. Reetika Chawla,missing_specialisation,https://vitap.ac.in/School%20of%20Advanced%20Science%20(SAS)/faculty/reetika.chawla
+VITAP-70923,Dr. Sarath Sasikumar,scopus_unparsed,https://vitap.ac.in/School%20of%20Social%20Science%20and%20Humanities%20(VISH)/faculty/sarath.sasikumar
+VITAP-70736,Mr. Jayanta Pratihar,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/jayanta.pratihar
+VITAP-70907,Ms. Harapriya Kar,scholar_not_profile_link,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/harapriya.kar
+VITAP-70709,Ms. Yarlagadda Siva Reshma,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/sivareshma.y
+VITAP-70716,Mr. Kandru Lakshmi Sai Praneeth,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/saipraneeth.kl
+VITAP-70724,Mr. Madugula Kiran Kumar,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/kirankumar.m
+VITAP-70726,Ms. Pechetti Mounika,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/mounika.p
+VITAP-70728,Mr. Burla Nagaraju,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/nagaraju.burla
+VITAP-70733,Ms. Mannepuli Srujana,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/srujana.m
+VITAP-70738,Ms. Paidipogu Sowjanya,missing_specialisation,https://vitap.ac.in/School%20of%20Computer%20Science%20and%20Engineering%20(SCOPE)/faculty/sowjanya.paidipogu

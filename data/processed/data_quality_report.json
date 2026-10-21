@@ -1,0 +1,117 @@
+{
+ "generated_at": "2026-10-17T07:59:52.652015+00:00",
+ "profiles_discovered": 609,
+ "extraction_failures": 0,
+ "profiles_extracted": 609,
+ "duplicates_removed": 0,
+ "duplicates": [],
+ "profiles_processed": 609,
+ "issue_counts": {
+  "scopus_unparsed": 33,
+  "missing_specialisation": 32,
+  "scholar_not_profile_link": 23,
+  "orcid_unparsed": 4,
+  "rank_not_stated": 1,
+  "non_institutional_email": 1,
+  "missing_email": 1,
+  "no_profile_url": 1
+ },
+ "field_coverage": {
+  "photograph_url": {
+   "count": 609,
+   "pct": 100.0
+  },
+  "designation": {
+   "count": 609,
+   "pct": 100.0
+  },
+  "official_email": {
+   "count": 608,
+   "pct": 99.8
+  },
+  "office_location": {
+   "count": 599,
+   "pct": 98.4
+  },
+  "specialisation": {
+   "count": 577,
+   "pct": 94.7
+  },
+  "education_ug": {
+   "count": 592,
+   "pct": 97.2
+  },
+  "education_pg": {
+   "count": 586,
+   "pct": 96.2
+  },
+  "education_phd": {
+   "count": 578,
+   "pct": 94.9
+  },
+  "google_scholar": {
+   "count": 480,
+   "pct": 78.8
+  },
+  "orcid": {
+   "count": 199,
+   "pct": 32.7
+  },
+  "scopus": {
+   "count": 380,
+   "pct": 62.4
+  },
+  "linkedin": {
+   "count": 317,
+   "pct": 52.1
+  },
+  "education_other": {
+   "count": 130,
+   "pct": 21.3
+  },
+  "professional_memberships": {
+   "count": 250,
+   "pct": 41.1
+  },
+  "researchgate": {
+   "count": 282,
+   "pct": 46.3
+  },
+  "dblp": {
+   "count": 24,
+   "pct": 3.9
+  },
+  "vidwan": {
+   "count": 162,
+   "pct": 26.6
+  },
+  "personal_website": {
+   "count": 25,
+   "pct": 4.1
+  },
+  "patents": {
+   "count": 96,
+   "pct": 15.8
+  },
+  "projects": {
+   "count": 78,
+   "pct": 12.8
+  },
+  "awards": {
+   "count": 146,
+   "pct": 24.0
+  }
+ },
+ "status_counts": {
+  "complete": 522,
+  "minimal": 15,
+  "partial": 72
+ },
+ "fields_not_published": [
+  "publications",
+  "experience"
+ ],
+ "extraction_failure_details": [],
+ "snapshot_captured_at": "2026-10-17T06:32:36.379Z",
+ "source_page": "https://vitap.ac.in/allfaculty"
+}
