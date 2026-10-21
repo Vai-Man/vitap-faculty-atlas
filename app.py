@@ -33,67 +33,45 @@ PAGES = ["Overview", "Directory", "Faculty profile", "Department analytics",
          "Research & text analytics", "Faculty discovery", "Data & methodology"]
 PAGE_SIZE = 24
 
-# ------------------------------------------------------------------ dark mode state
-if "dark_mode" not in st.session_state:
-    st.session_state["dark_mode"] = False
-
-_LIGHT_VARS = """
-:root { --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --line:#e1e0d9;
-        --surface:#ffffff; --plane:#f9f9f7; --accent:#1c5cab; --accent-soft:#e8f0fb;
-        --note-bg:#f4f8fd; --note-border:#86b6ef; --chip-grey-bg:#f0efec; --match-bg:#f0efec;
-        --card-shadow:rgba(13,54,107,.10); }
-[data-testid="stAppViewContainer"] { background: #ffffff; }
-[data-testid="stSidebar"] { background: #f4f6f9; }
-"""
-
-_DARK_VARS = """
-:root { --ink:#e8e8e6; --ink2:#a8a8a4; --muted:#6b6b68; --line:#2e2e2c;
-        --surface:#1e1e1c; --plane:#161614; --accent:#5b9ef0; --accent-soft:#1a2d4a;
-        --note-bg:#1a2535; --note-border:#3a6ea8; --chip-grey-bg:#2a2a28; --match-bg:#2a2a28;
-        --card-shadow:rgba(0,0,0,.35); }
-[data-testid="stAppViewContainer"] { background: #121210; }
-[data-testid="stSidebar"] { background: #1a1a18; }
-"""
-
 # ------------------------------------------------------------------ styling
-_theme_vars = _DARK_VARS if st.session_state["dark_mode"] else _LIGHT_VARS
-st.markdown(f"""
+st.markdown("""
 <style>
-{_theme_vars}
-.block-container {{ padding-top: 1.6rem; max-width: 1280px; }}
-h1, h2, h3 {{ letter-spacing: -0.01em; }}
-.hero {{ padding: 22px 26px; border-radius: 14px; background: linear-gradient(120deg,#0d366b 0%,#1c5cab 60%,#2a78d6 100%);
-        color: #fff; margin-bottom: 18px; }}
-.hero h1 {{ color:#fff; margin:0 0 4px 0; font-size: 2rem; }}
-.hero p {{ color:#dbe8fa; margin:0; font-size: 0.98rem; }}
-.kpi {{ border:1px solid var(--line); border-radius:12px; padding:14px 16px; background:var(--surface); height:100%; }}
-.kpi .v {{ font-size:1.75rem; font-weight:650; color:var(--ink); line-height:1.1; }}
-.kpi .l {{ font-size:0.82rem; color:var(--ink2); margin-top:4px; }}
-.kpi .s {{ font-size:0.75rem; color:var(--muted); margin-top:2px; }}
-.grid {{ display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:14px; }}
-.card {{ border:1px solid var(--line); border-radius:12px; padding:14px; background:var(--surface);
-        display:flex; gap:12px; align-items:flex-start; transition: box-shadow .15s, border-color .15s; }}
-.card:hover {{ box-shadow: 0 4px 14px var(--card-shadow); border-color:#b7d3f6; }}
-.avatar {{ position:relative; flex:0 0 64px; width:64px; height:64px; border-radius:50%; overflow:hidden;
-          display:flex; align-items:center; justify-content:center; font-weight:650; color:#fff; font-size:1.2rem; }}
-.avatar .ph {{ position:absolute; inset:0; background-size:cover; background-position:center top; background-repeat:no-repeat; }}
-.avatar.lg {{ flex-basis:150px; width:150px; height:150px; font-size:2.6rem; border-radius:16px; }}
-.card .nm {{ font-weight:620; color:var(--ink); font-size:0.95rem; line-height:1.25; }}
-.card .ds {{ color:var(--ink2); font-size:0.8rem; margin-top:2px; }}
-.card .dp {{ color:var(--muted); font-size:0.76rem; margin-top:2px; }}
-.card a.btn {{ display:inline-block; margin-top:8px; font-size:0.78rem; color:var(--accent); text-decoration:none; font-weight:600; }}
-.chip {{ display:inline-block; padding:3px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent);
-        font-size:0.78rem; margin:2px 4px 2px 0; }}
-.chip.grey {{ background:var(--chip-grey-bg); color:var(--ink2); }}
-.tag {{ display:inline-block; padding:2px 8px; border-radius:6px; font-size:0.72rem; font-weight:600; }}
-.tag.complete {{ background:#e3f4e3; color:#006300; }} .tag.partial {{ background:#fff3d6; color:#7a5200; }}
-.tag.minimal {{ background:#fbe3e3; color:#9b1c1c; }}
-.note {{ border-left:3px solid var(--note-border); background:var(--note-bg); padding:10px 14px; border-radius:6px; color:var(--ink2);
-        font-size:0.88rem; margin:6px 0 14px 0; }}
-.match {{ font-family: ui-monospace, Menlo, Consolas, monospace; font-size:0.78rem; background:var(--match-bg);
-         padding:1px 6px; border-radius:4px; margin-right:4px; color:var(--ink); }}
-.src a {{ color:var(--accent); }}
-.empty {{ text-align:center; padding:40px; color:var(--muted); border:1px dashed var(--line); border-radius:12px; }}
+:root { --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --line:#e1e0d9;
+        --surface:#ffffff; --plane:#f9f9f7; --accent:#1c5cab; --accent-soft:#e8f0fb; }
+.block-container { padding-top: 1.6rem; max-width: 1280px; }
+h1, h2, h3 { letter-spacing: -0.01em; }
+.hero { padding: 22px 26px; border-radius: 14px; background: linear-gradient(120deg,#0d366b 0%,#1c5cab 60%,#2a78d6 100%);
+        color: #fff; margin-bottom: 18px; }
+.hero h1 { color:#fff; margin:0 0 4px 0; font-size: 2rem; }
+.hero p { color:#dbe8fa; margin:0; font-size: 0.98rem; }
+.kpi { border:1px solid var(--line); border-radius:12px; padding:14px 16px; background:var(--surface); height:100%; }
+.kpi .v { font-size:1.75rem; font-weight:650; color:var(--ink); line-height:1.1; }
+.kpi .l { font-size:0.82rem; color:var(--ink2); margin-top:4px; }
+.kpi .s { font-size:0.75rem; color:var(--muted); margin-top:2px; }
+.grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:14px; }
+.card { border:1px solid var(--line); border-radius:12px; padding:14px; background:var(--surface);
+        display:flex; gap:12px; align-items:flex-start; transition: box-shadow .15s, border-color .15s; }
+.card:hover { box-shadow: 0 4px 14px rgba(13,54,107,.10); border-color:#b7d3f6; }
+.avatar { position:relative; flex:0 0 64px; width:64px; height:64px; border-radius:50%; overflow:hidden;
+          display:flex; align-items:center; justify-content:center; font-weight:650; color:#fff; font-size:1.2rem; }
+.avatar .ph { position:absolute; inset:0; background-size:cover; background-position:center top; background-repeat:no-repeat; }
+.avatar.lg { flex-basis:150px; width:150px; height:150px; font-size:2.6rem; border-radius:16px; }
+.card .nm { font-weight:620; color:var(--ink); font-size:0.95rem; line-height:1.25; }
+.card .ds { color:var(--ink2); font-size:0.8rem; margin-top:2px; }
+.card .dp { color:var(--muted); font-size:0.76rem; margin-top:2px; }
+.card a.btn { display:inline-block; margin-top:8px; font-size:0.78rem; color:var(--accent); text-decoration:none; font-weight:600; }
+.chip { display:inline-block; padding:3px 10px; border-radius:999px; background:var(--accent-soft); color:#184f95;
+        font-size:0.78rem; margin:2px 4px 2px 0; }
+.chip.grey { background:#f0efec; color:var(--ink2); }
+.tag { display:inline-block; padding:2px 8px; border-radius:6px; font-size:0.72rem; font-weight:600; }
+.tag.complete { background:#e3f4e3; color:#006300; } .tag.partial { background:#fff3d6; color:#7a5200; }
+.tag.minimal { background:#fbe3e3; color:#9b1c1c; }
+.note { border-left:3px solid #86b6ef; background:#f4f8fd; padding:10px 14px; border-radius:6px; color:var(--ink2);
+        font-size:0.88rem; margin:6px 0 14px 0; }
+.match { font-family: ui-monospace, Menlo, Consolas, monospace; font-size:0.78rem; background:#f0efec;
+         padding:1px 6px; border-radius:4px; margin-right:4px; }
+.src a { color:var(--accent); }
+.empty { text-align:center; padding:40px; color:var(--muted); border:1px dashed var(--line); border-radius:12px; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -205,12 +183,6 @@ with st.sidebar:
     st.markdown("### 🎓 VITbutAP Faculty Atlas")
     st.caption("CSE 4039 · Advanced Social, Text and Media Analytics Lab")
     page = st.radio("Navigate", PAGES, key="page", label_visibility="collapsed")
-    st.divider()
-    _dm = st.session_state["dark_mode"]
-    _toggle_label = "☀️ Light mode" if _dm else "🌙 Dark mode"
-    if st.button(_toggle_label, use_container_width=True):
-        st.session_state["dark_mode"] = not _dm
-        st.rerun()
     st.divider()
     st.caption(f"**{N}** faculty profiles · **{df['school_code'].nunique()}** schools")
     st.caption(f"Snapshot: {str(META.get('snapshot_captured_at', ''))[:10]}")

@@ -2,9 +2,10 @@
 
 **CSE 4039: Advanced Social, Text and Media Analytics Lab · Fall 2026 · Slots L39/L40**
 **Team VITbutAP:**
-- Vaibhav Manihar — 23BCB7163
-- Udit Ray — 23BCB7008
-- Ajitesh Mohapatra — 23BCB7178
+- Vaibhav Manihar (23BCB7163)
+- Ajitesh Mohapatra (23BCB7178)
+- Udit Ray (23BCB7008)
+
 **Institution:** VIT-AP University, Andhra Pradesh
 
 A searchable faculty directory and analytics platform built from the public faculty
