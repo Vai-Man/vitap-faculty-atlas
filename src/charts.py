@@ -64,28 +64,43 @@ def department_sunburst(df: pd.DataFrame) -> go.Figure:
     d = df.assign(dept=df["department"].where(df["department_level"] == "department",
                                               "(no sub-department)"))
     g = d.groupby(["school_code", "dept"]).size().reset_index(name="n")
-    ids, labels, parents, values, colors = [], [], [], [], []
+    total = len(df)
+    ids, labels, parents, values, colors, customdata = [], [], [], [], [], []
     for sc, grp in g.groupby("school_code"):
-        ids.append(sc); labels.append(sc); parents.append(""); values.append(int(grp["n"].sum()))
+        sc_n = int(grp["n"].sum())
+        ids.append(sc); labels.append(sc); parents.append(""); values.append(sc_n)
         colors.append(SCHOOL_COLORS.get(sc, MUTED))
+        customdata.append([sc_n, round(100 * sc_n / total, 1)])
         for _, r in grp.iterrows():
             ids.append(f"{sc}/{r['dept']}"); labels.append(r["dept"]); parents.append(sc)
             values.append(int(r["n"])); colors.append(SCHOOL_COLORS.get(sc, MUTED))
+            customdata.append([int(r["n"]), round(100 * r["n"] / total, 1)])
     fig = go.Figure(go.Sunburst(ids=ids, labels=labels, parents=parents, values=values,
                                 branchvalues="total", marker=dict(colors=colors, line=dict(color="white", width=2)),
-                                hovertemplate="<b>%{label}</b><br>%{value} faculty<extra></extra>",
+                                customdata=customdata,
+                                hovertemplate="<b>%{label}</b><br>%{customdata[0]} faculty · %{customdata[1]}% of total<extra></extra>",
                                 insidetextorientation="radial"))
     return style(fig, 460, "Schools and departments (inner: school, outer: department)", legend=False)
 
 
 def rank_stacked(df: pd.DataFrame, percent: bool = True) -> go.Figure:
-    ct = analytics.rank_share_by_school(df) if percent else analytics.rank_by_school(df)
+    pct_ct = analytics.rank_share_by_school(df)
+    cnt_ct = analytics.rank_by_school(df)
+    ct = pct_ct if percent else cnt_ct
     ct = ct.reindex([s for s in SCHOOL_ORDER if s in ct.index])
+    pct_ct = pct_ct.reindex(ct.index)
+    cnt_ct = cnt_ct.reindex(ct.index)
     fig = go.Figure()
     for rank in ct.columns:
+        if percent:
+            cd = list(zip(cnt_ct[rank].values, pct_ct[rank].values))
+            tmpl = f"<b>%{{y}}</b><br>{rank}: %{{customdata[1]}}% (%{{customdata[0]}} faculty)<extra></extra>"
+        else:
+            cd = list(zip(cnt_ct[rank].values, pct_ct[rank].values))
+            tmpl = f"<b>%{{y}}</b><br>{rank}: %{{customdata[0]}} faculty (%{{customdata[1]}}%)<extra></extra>"
         fig.add_bar(name=rank, y=ct.index, x=ct[rank], orientation="h",
                     marker=dict(color=RANK_COLORS.get(rank, MUTED), line=dict(color="#fcfcfb", width=2)),
-                    hovertemplate=f"<b>%{{y}}</b><br>{rank}: %{{x}}{'%' if percent else ''}<extra></extra>")
+                    customdata=cd, hovertemplate=tmpl)
     fig.update_layout(barmode="stack")
     fig.update_yaxes(autorange="reversed")
     fig.update_xaxes(title="% of school's profiles" if percent else "Faculty", range=[0, 100] if percent else None)
@@ -95,14 +110,36 @@ def rank_stacked(df: pd.DataFrame, percent: bool = True) -> go.Figure:
 def counts_bar(d: pd.DataFrame, x: str, y: str, title: str, color: str = CATEGORICAL[0],
                height: int = 380, horizontal: bool = True) -> go.Figure:
     d = d.copy()
+    # Attach the complementary metric (% if x is count, count if x is %)
+    _has_pct = "percent" in d.columns
+    _has_cnt = "count" in d.columns or "faculty" in d.columns
+    _cnt_col = "count" if "count" in d.columns else ("faculty" if "faculty" in d.columns else None)
     if horizontal:
         d = d.iloc[::-1]
+        if x in ("count", "faculty") and _has_pct:
+            cd = list(zip(d[x].values, d["percent"].values))
+            tmpl = "<b>%{y}</b><br>%{customdata[0]} · %{customdata[1]}%<extra></extra>"
+        elif x == "percent" and _cnt_col:
+            cd = list(zip(d["percent"].values, d[_cnt_col].values))
+            tmpl = "<b>%{y}</b><br>%{customdata[0]}% · %{customdata[1]} profiles<extra></extra>"
+        else:
+            cd = None
+            tmpl = "<b>%{y}</b><br>%{x}<extra></extra>"
         fig = go.Figure(go.Bar(x=d[x], y=d[y], orientation="h",
                                marker=dict(color=color, line=dict(color="#fcfcfb", width=1)),
-                               hovertemplate="<b>%{y}</b><br>%{x}<extra></extra>"))
+                               customdata=cd, hovertemplate=tmpl))
     else:
+        if x in ("count", "faculty") and _has_pct:
+            cd = list(zip(d[x].values, d["percent"].values))
+            tmpl = "<b>%{x}</b><br>%{customdata[0]} · %{customdata[1]}%<extra></extra>"
+        elif x == "percent" and _cnt_col:
+            cd = list(zip(d["percent"].values, d[_cnt_col].values))
+            tmpl = "<b>%{x}</b><br>%{customdata[0]}% · %{customdata[1]} profiles<extra></extra>"
+        else:
+            cd = None
+            tmpl = "<b>%{x}</b><br>%{y}<extra></extra>"
         fig = go.Figure(go.Bar(x=d[y], y=d[x], marker=dict(color=color),
-                               hovertemplate="<b>%{x}</b><br>%{y}<extra></extra>"))
+                               customdata=cd, hovertemplate=tmpl))
     return style(fig, height, title, legend=False)
 
 
@@ -110,8 +147,12 @@ def availability_bar(df: pd.DataFrame) -> go.Figure:
     d = analytics.field_availability(df)
     fig = counts_bar(d, "percent", "label", "Profile fields: % of profiles with the field filled",
                      height=520)
-    fig.update_traces(text=[f"{p:.0f}%" for p in d["percent"].iloc[::-1]], textposition="outside",
-                      textfont=dict(color=INK2))
+    fig.update_traces(
+        text=[f"{p:.0f}%" for p in d["percent"].iloc[::-1]], textposition="outside",
+        textfont=dict(color=INK2),
+        customdata=list(zip(d["percent"].iloc[::-1].values, d["count"].iloc[::-1].values)),
+        hovertemplate="<b>%{y}</b><br>%{customdata[0]:.1f}% · %{customdata[1]} profiles<extra></extra>",
+    )
     fig.update_xaxes(range=[0, 118], title="% of profiles")
     fig.update_traces(cliponaxis=False)
     return fig
@@ -164,9 +205,11 @@ def phd_stacked(df: pd.DataFrame) -> go.Figure:
     colors = dict(zip(order, palette[:8] + ["#a3a29a", "#c9c8c0", "#e1e0d9"]))
     fig = go.Figure()
     for c in cols:
+        cd = list(zip(ct[c].values.astype(int), share[c].round(1).values))
         fig.add_bar(name=c, y=share.index, x=share[c].round(1), orientation="h",
                     marker=dict(color=colors[c], line=dict(color="#fcfcfb", width=1.5)),
-                    hovertemplate=f"<b>%{{y}}</b><br>{c}: %{{x:.1f}}%<extra></extra>")
+                    customdata=cd,
+                    hovertemplate=f"<b>%{{y}}</b><br>{c}: %{{customdata[1]:.1f}}% (%{{customdata[0]}} faculty)<extra></extra>")
     fig.update_layout(barmode="stack")
     fig.update_yaxes(autorange="reversed")
     fig.update_xaxes(range=[0, 100], title="% of school's profiles")
@@ -177,11 +220,18 @@ def research_output_bars(df: pd.DataFrame) -> go.Figure:
     d = analytics.research_output_by_school(df).reindex(
         [s for s in SCHOOL_ORDER if s in df["school_code"].unique()])
     fig = go.Figure()
+    cnt_map = {"pct_with_patent": "patents_listed", "pct_with_project": "projects_listed",
+               "pct_with_award": "awards_listed"}
     for col, name, c in [("pct_with_patent", "Lists ≥1 patent", CATEGORICAL[0]),
                          ("pct_with_project", "Lists ≥1 funded project", CATEGORICAL[1]),
                          ("pct_with_award", "Lists ≥1 award", CATEGORICAL[2])]:
+        # customdata[0]=pct, customdata[1]=total entries listed, customdata[2]=school faculty count
+        cd = list(zip(d[col].values, d[cnt_map[col]].values, d["faculty"].values))
+        n_faculty = (d[col] / 100 * d["faculty"]).round(0).astype(int)
+        cd2 = list(zip(d[col].values, n_faculty.values, d["faculty"].values))
         fig.add_bar(name=name, x=d.index, y=d[col], marker=dict(color=c),
-                    hovertemplate=f"<b>%{{x}}</b><br>{name}: %{{y}}%<extra></extra>")
+                    customdata=cd2,
+                    hovertemplate=f"<b>%{{x}}</b><br>{name}: %{{customdata[0]}}% (%{{customdata[1]}} of %{{customdata[2]}} faculty)<extra></extra>")
     fig.update_layout(barmode="group", bargroupgap=0.08)
     fig.update_yaxes(title="% of school's profiles")
     return style(fig, 380, "Share of profiles listing patents, projects and awards")
